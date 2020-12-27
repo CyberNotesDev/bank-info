@@ -1,4 +1,8 @@
 #include <iostream>
+// Stock market
+// Car
+// See how much $ I already have
+// _ amount always in the bank for auto pay fees
 
 double myBank(double savingsAmount) {
     double autoPay = 51.38;
@@ -11,22 +15,15 @@ double myBank(double savingsAmount) {
 }
 
 int main() {
-    // Stock market
-    // Car
-    // See how much $ I already have
-    // _ amount always in the bank for auto pay fees
 
-    // std::cout << "Hello, What is your pin?" << "\n";
-    // int pinnumber = 1010;
-    // int isItPin;
-    // int trys = 0;
-    // while(isItPin != pinnumber && trys != 4) {
-    //     std::cin >> isItPin;
-    //     trys++;
-    //     std::cout << "Incorrect, try again!" << "\n" << "You now have " << 4-trys << " Trys left\n";
-    // }
+    std::cout << "If you want to save a good amount for stocks before the age of 18 then you should save 10% of your income" << "\n";
 
-    std::cout << myBank(200);
+    double myTotal = myBank(200);
+    std::cout << myTotal;
+
+    double stocksAmount = myTotal * 0.1;
+
+    std::cout << "\n" << stocksAmount << "\n";
 
     return 0;
 }
