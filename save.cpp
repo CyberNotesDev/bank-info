@@ -31,6 +31,10 @@ double savings(double savingsAmount = 2200) {
     return savingsAmount;
 }
 
+string introduction() {
+    return "Welcome!";
+}
+
 int main() {
     int pin = 1010;
     int pinAnswer;
@@ -41,10 +45,10 @@ int main() {
         tries--;
         if (tries != 0 && pinAnswer != pin) {
             cout << "Incorrect, you now have " << tries << " tries left.\n";
-        } else if (tries == 0) {
+        } else if (tries == 0 && pinAnswer != pin) {
             cout << "You are now locked out! Contact our specialist for help.\n";
         } else {
-            break;
+            cout << introduction() << "\n";
         }
     }
 
