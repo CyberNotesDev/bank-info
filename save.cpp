@@ -1,8 +1,23 @@
 #include <iostream>
-
 using namespace std;
 
-double savings(double savingsAmount = 2200) {
+string checkingsOrSavings;
+
+string introduction() {
+    cout << "Welcome! would you like to go into your checkings or savings?\n";
+    cin >> checkingsOrSavings;
+    if (checkingsOrSavings == "checkings") {
+        cout << "okay, sounds great!";
+    } else if (checkingsOrSavings == "savings") {
+        cout << "Okay, sounds great!";
+    } else {
+        cout << "try again!";
+    }
+    return "bob";
+}
+
+double savings(double savingsAmount) {
+    savingsAmount = 2200;
     double autoPayments = 51.38;
     double priceOfItem;
     string yesOrNo = "";
@@ -31,28 +46,34 @@ double savings(double savingsAmount = 2200) {
     return savingsAmount;
 }
 
-string introduction() {
-    return "Welcome!";
+double checkings() {
+    return 120.03;
 }
 
 int main() {
-    int pin = 1010;
-    int pinAnswer;
-    int tries = 3;
-    while(pinAnswer != pin && tries > 0) {
-        cout << "What is the pin? ";
-        cin >> pinAnswer;
-        tries--;
-        if (tries != 0 && pinAnswer != pin) {
-            cout << "Incorrect, you now have " << tries << " tries left.\n";
-        } else if (tries == 0 && pinAnswer != pin) {
-            cout << "You are now locked out! Contact our specialist for help.\n";
-        } else {
-            cout << introduction() << "\n";
-        }
+    cout << introduction();
+
+    if (checkingsOrSavings == "checkings") {
+        cout << checkings();
+    } else {
+        cout << savings(2020);
     }
 
-    // cout << savings() << "\n";
+    // int pin = 1010;
+    // int pinAnswer;
+    // int tries = 3;
+    // while(pinAnswer != pin && tries > 0) {
+    //     cout << "What is the pin? ";
+    //     cin >> pinAnswer;
+    //     tries--;
+    //     if (tries != 0 && pinAnswer != pin) {
+    //         cout << "Incorrect, you now have " << tries << " tries left.\n";
+    //     } else if (tries == 0 && pinAnswer != pin) {
+    //         cout << "You are now locked out! Contact our specialist for help.\n";
+    //     } else {
+    //         cout << 
+    //     }
+    // }
 
     return 0;
 }
