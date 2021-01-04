@@ -18,15 +18,16 @@ class Bank {
                 } else {
                     cout << "Correct!\n";
                     string checkingsOrSavings;
-                    cout << "Welcome! would you like to go into your checkings or savings?\n";
-                    cin >> checkingsOrSavings;
-
-                    if (checkingsOrSavings == "checkings") {
-                        checkings(20212);
-                    } else if (checkingsOrSavings == "savings") {
-                        savings(2020);
-                    } else {
-                        cout << "try again!";
+                    while (checkingsOrSavings != "checkings" || checkingsOrSavings != "savings") {
+                        cout << "Welcome! would you like to go into your checkings or savings?\n";
+                        cin >> checkingsOrSavings;
+                        if (checkingsOrSavings == "checkings") {
+                            checkings(20212);
+                        } else if (checkingsOrSavings == "savings") {
+                            savings(2020);
+                        } else {
+                            cout << "try again!\n";
+                        }
                     }
                 }
             }
