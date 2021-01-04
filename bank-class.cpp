@@ -27,7 +27,7 @@ class Bank {
                     } else {
                         cout << "try again!\n";
                         while(checkingsOrSavings != "checkings" || checkingsOrSavings != "savings") {
-                            cout << "Welcome! would you like to go into your checkings or savings? \n";
+                            cout << "Welcome! would you like to go into your checkings or savings? ";
                             cin >> checkingsOrSavings;
                             if (checkingsOrSavings == "checkings") {
                                 checkings(22);
