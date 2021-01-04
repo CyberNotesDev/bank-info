@@ -22,7 +22,7 @@ class Bank {
                     cin >> checkingsOrSavings;
 
                     if (checkingsOrSavings == "checkings") {
-                        checkings();
+                        checkings(20212);
                     } else if (checkingsOrSavings == "savings") {
                         savings(2020);
                     } else {
@@ -60,7 +60,14 @@ class Bank {
             }
         }
 
-        void checkings() {
-            cout << "120.03";
+        void checkings(double amount) {
+            amount = 350.50;
+            string yesOrNo;
+            cout << "Would you like to know your balance? ";
+            cin >> yesOrNo;
+
+            if (yesOrNo == "yes") {
+                cout << amount;
+            }
         }
 };
