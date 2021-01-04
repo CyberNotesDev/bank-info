@@ -67,13 +67,14 @@ class Bank {
             cin >> yesOrNo;
 
             while(yesOrNo != "yes" || yesOrNo != "no") {
-                cout << "Would you like to know your balance?(yes/no) ";
                 if (yesOrNo == "yes") {
                     cout << "Your balance is $" << amount;
                 } else if (yesOrNo == "no") {
                     cout << "Okay, Goodbye!";
+                } else {
+                    cout << "Would you like to know your balance?(yes/no) ";
+                    cin >> yesOrNo;
                 }
-                cin >> yesOrNo;
             }
         }
 };
