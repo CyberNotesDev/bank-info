@@ -18,15 +18,24 @@ class Bank {
                 } else {
                     cout << "Correct!\n";
                     string checkingsOrSavings;
-                    while (checkingsOrSavings != "checkings" || checkingsOrSavings != "savings") {
-                        cout << "Welcome! would you like to go into your checkings or savings?\n";
-                        cin >> checkingsOrSavings;
-                        if (checkingsOrSavings == "checkings") {
-                            checkings(20212);
-                        } else if (checkingsOrSavings == "savings") {
-                            savings(2020);
-                        } else {
-                            cout << "try again!\n";
+                    cout << "Welcome! would you like to go into your checkings or savings? ";
+                    cin >> checkingsOrSavings;
+                    if (checkingsOrSavings == "checkings") {
+                        checkings(20212);
+                    } else if (checkingsOrSavings == "savings") {
+                        savings(2020);
+                    } else {
+                        cout << "try again!\n";
+                        while(checkingsOrSavings != "checkings" || checkingsOrSavings != "savings") {
+                            cout << "Welcome! would you like to go into your checkings or savings? \n";
+                            cin >> checkingsOrSavings;
+                            if (checkingsOrSavings == "checkings") {
+                                checkings(22);
+                                break;
+                            } else if (checkingsOrSavings == "savings") {
+                                savings(2000);
+                                break;
+                            }
                         }
                     }
                 }
@@ -70,8 +79,10 @@ class Bank {
             while(yesOrNo != "yes" || yesOrNo != "no") {
                 if (yesOrNo == "yes") {
                     cout << "Your balance is $" << amount;
+                    break;
                 } else if (yesOrNo == "no") {
                     cout << "Okay, Goodbye!";
+                    break;
                 } else {
                     cout << "Would you like to know your balance?(yes/no) ";
                     cin >> yesOrNo;
